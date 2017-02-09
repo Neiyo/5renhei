@@ -1,0 +1,32 @@
+{
+  "name": "first-redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node ./server/server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "author": "joey",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "react-scripts": "^0.6.0"
+  },
+  "dependencies": {
+    "axios": "0.15.3",
+    "classnames": "^2.2.5",
+    "fetch": "^1.1.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "2.1.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "whatwg-fetch": "^2.0.2"
+  }
+}

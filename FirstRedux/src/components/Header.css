@@ -1,0 +1,17 @@
+div{
+  width:200px;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+input{
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+  width: 150px
+}
+
+input[type="button"] {
+  width: 75px;
+  margin-left: 100px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let's start to learn Redux</title>
+    <div>
+        <div class="login" id="rootEl"></div>
+    </div>
+</head>
+<body>
+</body>
+<script src="./bundle.js"></script>
+</html>
+<script type="text/javascript">
+function(selection){
+  var layoutField = selection.findParentByType('dialog').getField('./layout');
+  var targetVal = selection.getValue();
+  console.log(layoutField.options);
+  if(targetVal === 'brand') {
+    layoutField.setOptions({'text':'Extra Large','value':'xlarge'})
+  }else {
+    layoutField.setOptions({'text':'Extra Large','value':'xlarge'},{'text':'Large','value':'large'});
+  }
+}
+
+function validate(selection){var targetVal = selection.getValue();if(targetVal === 'brand') {selection.findParentByType('dialog').getField('./layout').options[1] = '';}else {selection.findParentByType('dialog').getField('./layout').options[1] = {'jcr:primaryType': 'cq:Widget','qtip': '','text': 'Large','value': 'large'};}}
+</script>
+function(selection) { var value = selection.getValue(); var layoutField = selection.findParentByType('dialog').getField('./layout'); if (value === 'organic') { var option_organic = [ {'text': '3up', 'value': '3up'}, {'text': '4up', 'value': '4up'}]; layoutField.setOptions(option_organic); if (!option_organic.some(function(item) { return item.value === layoutField.getValue(); })) { layoutField.setValue(option_organic[0].value); } } else { var option_ordered = [ {'text': '2up', 'value': '2up'},{'text': '3up', 'value': '3up'}, {'text': '4up', 'value': '4up'}]; layoutField.setOptions(option_ordered); } }
